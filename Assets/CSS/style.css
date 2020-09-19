@@ -1,0 +1,218 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --orange: #ff6600;
+    --black:#1A1A1A;
+    --secondary-dark: #333333; 
+}
+body{
+    max-width: 100%;
+    height: auto;
+    font-family: 'Crimson Text', serif;
+}
+p{
+    font-size: 1.3rem;
+}
+
+/*Mobile first design*/
+
+header{
+    background-color: var(--black);
+    height: 90vh;
+}
+.menu{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 3em 1em;
+    font-size: 1.2rem;
+    transition: color .4s ease-in-out;
+    -webkit-transition: color .4s ease-in-out;
+    -moz-transition: color .4s ease-in-out;
+}
+.logo img{
+    width: 100px;
+    margin: 20px;
+}
+nav{
+    position: relative;
+}
+.menu:hover{
+    color: var(--orange);
+}
+.navlink{
+    list-style: none;
+    display: flex;
+}
+header{
+    width: 100%;
+    height: 100%;
+}
+.hero-section{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.hero-section .hero-text{
+    margin: 20px; 
+}
+.hero-section .hero-img{
+        width: 100%;
+    }
+    .hero-img img{
+        width:100%;
+        height: 80%;
+    }
+    .hero-text h1{
+        font-size: 2.4rem;
+        margin: 5px 0;
+        color: white;
+    }
+    .hero-text p{ color: white; font-size: 1.2rem;}
+    form input{
+        background-color: var(--secondary-dark);
+        padding: 1rem;
+        margin: 20px 0;
+        width: 82%;
+        font-size: 1rem;
+        color: white;
+        border: none;
+    }
+    .search-btn{
+        padding: 13px 20px;
+        background-color: var(--orange);
+        color: white;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all .5s ease-in;
+     }
+     .search-icon{
+        background-color: var(--orange);
+        padding: 1rem;
+        border: none;
+        font-size: 1rem;
+         color: white;
+         transition: all .5s ease-in;
+         cursor: pointer;
+     }
+     .search-icon:hover{
+        background-color: var(--secondary-dark);
+    }
+    .search-btn:hover{
+        background-color: var(--secondary-dark);
+    }
+
+/*resolution for larger screens*/
+@media (min-width: 1281px) {
+    .navbar{ 
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 130px;
+    }
+    .logo img{
+        width: 200px;
+        margin: 5px !important;
+    }
+    .menu-items{
+        margin: 10px 5px;
+      
+      }
+    .hero-section{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 100px;
+        margin-top: 50px;
+    }
+    .hero-img{
+        width: 40% !important;
+    }
+    .hero-section .hero-text{
+        margin-top: 80px; 
+    }
+    .hero-text h1{
+        font-size: 3rem;
+        margin: 10px 0;
+    }
+    .hero-text p{font-size: 2rem; width: 80%;}
+    .search-btn{ padding: 18px 28px; font-size: 1.3rem; margin-top: 20px;}
+    form input, .search-icon{ padding: 2rem; font-size: 1.8rem;}
+  }
+
+/*resolution for most laptops, desktops: screens btw 1025px to 1280px*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .hero-section{
+        display: flex;
+        flex-direction: row;
+        margin-top: 50px;
+        padding: 0 100px;
+    }
+    .logo img{
+        width: 200px;
+        margin: 5px !important;
+    }
+    .navbar{ 
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 120px;
+    }
+   .navlink{
+     margin: 10px 5px;
+   }
+    .hero-img{
+        width: 40% !important;
+    }
+    .hero-text h1{
+        font-size: 3rem;
+    }
+    .hero-text p{
+        margin-top: 15px;
+        width: 80%;
+    }
+    form{
+        margin: 25px 0;
+    }
+    
+}
+
+/*resolution for tablets and ipads*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+    
+  }
+
+/*resolution for most smartphones: screens btw 320px to 480px*/
+@media (min-width: 320px) and (max-width: 480px) {
+    .navlink{
+        list-style: none;
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around; 
+        height: 92vh;
+        width: 100%;
+        position: fixed;
+        background-color: var(--orange);
+        clip-path: circle(0px at 90% -10%);
+        -webkit-clip-path: circle(0px at 90% -10%);
+        transition: all 2s ease;
+    }
+    .navlink.open{
+        clip-path: circle(1000px at 90% -10%);
+    }
+    .line{
+        width: 26px;
+        height: 3px;
+        background-color: aliceblue;
+        margin: 5px;
+    }
+    .burger{
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+    }
+}
