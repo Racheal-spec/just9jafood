@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Nigerian foods">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Gooogle fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Pacifico&display=swap" rel="stylesheet">
@@ -12,10 +13,11 @@
     <title>Just9jafoods</title>     
 </head>
 <body>
+    <div class="wrapper">
     <header>
 <nav class="navbar">
     <div class="logo">
-        <a href ="./index.html"><img src="./Assets/Img/logo.png"></a>
+        <a href ="./index.html"><img src="./Assets/Img/logo.png" alt="logo"></a>
     </div>
      
     <div class="menu-items">
@@ -33,8 +35,9 @@
     <div class="line"></div>
     <div class="line"></div>
     </div>
-   
 </nav>
+
+<!--hero section-->
 
 <div class="hero-section">
 <div class="hero-text">
@@ -42,6 +45,7 @@
     <p>Everything you need to know about Nigerian food culture and recipes.
     </p>
     <form>
+        <label for="search"></label>
         <input type="text" id="search-bar" placeholder="search keyword, food, restaurant">
         <button class="search-icon" type="submit">
             <i class="fa fa-search"></i>
@@ -50,13 +54,234 @@
     <button class="search-btn">EXPLORE</button>
 </div>
     <div class="hero-img">
-        <img src="./Assets/Img/background.jpg">
+        <img src="./Assets/Img/background.jpg" alt="Images">
     </div>
 </div>
     </header>
+</div>
 
+<!--Food by category section-->
 
+<section class="food">
+<div class="title">
+<h1>food by category</h1>
+<div class="underline"></div>
+</div>
+<div class="foodcat-btn">
+    <div class="btn1">
+        <button class="food-btn">CULTURE</button>
+        </div>
+    <div class="btn2">
+    <button class="foods-btn">ETHNIC GROUP</button>
+    </div>
+    <div class="btn3">
+        <button class="food-btn">TRIBE</button>
+        </div>
+    <div class="btn4">
+    <button class="food-btn">POPULAR DISHES</button>
+    </div>
+</div>
+</section>
 
+<!--blog post section-->
+
+<section>
+    <div class="title">
+        <h1>BLOG POSTS</h1>
+        <div class="underline"></div>
+        </div>
+<div class="card-wrapper">
+<div class="card">
+    <div class="card-header">
+ <img src="./Assets/Img/emmanuel-ben-paul-grFZoxvKSvE-unsplash.jpg" alt="food-image">
+    </div>
+    <div class="card-body">
+        <div class="card-content">
+<h2>Top 10 amazing meal made from local crops</h2>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius hic quaerat 
+    quam alias,ipsam corrupti deleniti?</p>
+    </div>
+    <button class="card-btn">Read More</button>
+    </div>
+</div>
+    <!--second card-->
+    <div class="card">
+    <div class="card-header">
+        <img src="./Assets/Img/Jevinik-Restaurant-swallow.jpg" alt="food-image">
+           </div>
+           <div class="card-body">
+               <div class="card-content">
+       <h2>Top 10 amazing meal made from local crops</h2>
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius hic quaerat 
+           quam alias,ipsam corrupti deleniti?</p>
+           </div>
+           <button class="card-btn">Read More</button>
+           </div>
+    </div>
+    <!--third card-->
+    <div class="card">
+    <div class="card-header">
+        <img src="./Assets/Img/kokodome.jpg" alt="food-image">
+           </div>
+           <div class="card-body">
+               <div class="card-content">
+       <h2>Top 10 amazing meal made from local crops</h2>
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius hic quaerat 
+           quam alias,ipsam corrupti deleniti?</p>
+           </div>
+           <button class="card-btn">Read More</button>
+           </div>
+</div>
+</div>
+<div class="lastpost-btn">
+    <button class="post-btn">MORE POSTS</button>
+</div>
+</section>
+
+<!--Top Nigerian Restaurants section-->
+<section class="restaurants">
+    <div class="title">
+        <h1>top nigerian Restaurants</h1>
+        <div class="underline"></div>
+        </div>
+        <div class="all-restaurants">
+   <div class="first-restaurant">
+      <img src="./Assets/Img/Browns-Cafe-and-Restaurant-780x517.jpg" alt="brown cafe">
+    <div class="restaurant-overlay">
+        <h1>Brown Cafe Restaurant</h1>
+        <a href = "#" class="restaurant-btn1">VISIT WEBSITE</a>
+         <a href = "#" class="restaurant-btn2">ABOUT</a>
+    </div>
+    </div>   
+    <div class="second-restaurant">
+        <img src="./Assets/Img/blucabana-restaurant-Abuja.jpg" alt="brown cafe">
+     <div class="restaurant-overlay">
+         <h1>Brown Cafe Restaurant</h1>
+         <a href = "#" class="restaurant-btn1">VISIT WEBSITE</a>
+         <a href = "#" class="restaurant-btn2">ABOUT</a>
+     </div>
+     </div> 
+     <div class="third-restaurant">
+        <img src="./Assets/Img/Bungalow-restaurant.jpg" alt="brown cafe">
+     <div class="restaurant-overlay">
+         <h1>Brown Cafe Restaurant</h1>
+         <a href = "#" class="restaurant-btn1">VISIT WEBSITE</a>
+         <a href = "#" class="restaurant-btn2">ABOUT</a>
+     </div>
+     </div>
+     <div class="fourth-restaurant">
+        <img src="./Assets/Img/kokodome.jpg" alt="brown cafe">
+     <div class="restaurant-overlay">
+         <h1>Brown Cafe Restaurant</h1>
+         <a href = "#" class="restaurant-btn1">VISIT WEBSITE</a>
+         <a href = "#" class="restaurant-btn2">ABOUT</a>
+     </div>
+     </div>
+     </div> 
+     <div class="lastpost-btn">
+        <button class="post-btn">SEE MORE</button>
+    </div>     
+</section>
+
+<!--food recipe section-->
+
+<section class="food-recipe">
+    <div class="title">
+        <h1>food recipe</h1>
+        <div class="underline"></div>
+        </div>
+   <div class="all-recipes">
+    <div class="first-recipe">
+        <img src="./Assets/Img/unnamed-1-e1498990996948.jpg" alt="brown cafe">
+     <div class="recipe-overlay">
+         <a href="#">How to prepare Assorted Nkwobi with White Rice and Fried Rice Plantain(dodo)</a>
+         <div class="recipe-extras">
+         <i class="fa fa-user"></i><i>Tomisin</i>
+        <i class="fas fa-clock"></i><i>60 minutes Estimation</i>
+         </div>
+     </div>
+     </div>  
+    <div class="first-recipe">
+        <img src="./Assets/Img/unnamed-1-e1498990996948.jpg" alt="brown cafe">
+     <div class="recipe-overlay">
+        <a href="#">How to prepare Assorted Nkwobi with White Rice and Fried Rice Plantain(dodo)</a>
+         <div class="recipe-extras">
+         <i class="fa fa-user"></i><i>Tomisin</i>
+        <i class="fas fa-clock"></i><i>60 minutes Estimation</i>
+         </div>
+     </div>
+     </div>
+    <div class="first-recipe">
+        <img src="./Assets/Img/unnamed-1-e1498990996948.jpg" alt="brown cafe">
+     <div class="recipe-overlay">
+        <a href="#">How to prepare Assorted Nkwobi with White Rice and Fried Rice Plantain(dodo)</a>
+         <div class="recipe-extras">
+         <i class="fa fa-user"></i><i>Tomisin</i>
+        <i class="fas fa-clock"></i><i>60 minutes Estimation</i>
+         </div>
+     </div>
+     </div>
+    <div class="first-recipe">
+        <img src="./Assets/Img/unnamed-1-e1498990996948.jpg" alt="brown cafe">
+     <div class="recipe-overlay">
+        <a href="#">How to prepare Assorted Nkwobi with White Rice and Fried Rice Plantain(dodo)</a>
+         <div class="recipe-extras">
+         <i class="fa fa-user"></i><i>Tomisin</i>
+        <i class="fas fa-clock"></i><i>60 minutes Estimation</i>
+         </div>
+     </div>
+     </div>
+   </div>  
+   <div class="lastpost-btn">
+    <button class="post-btn">MORE RECIPES</button>
+</div>           
+</section>
+
+<!--newsletter-->
+<section class="newsletter-section">
+    <div class="newsletter">
+        <div class="title">
+            <h1>SUBSCRIBE</h1>
+            <div class="news-underline"></div>
+            </div>
+        <div class="news-img"></div>
+        <div class="news-content">
+            <p>Subscribe to our weekly Newsletter to recieve blog updates and new food recipes</p>
+            <form>
+            <label for="email"></label>
+            <input type="text" id="news-form" placeholder="Your email">
+            <button class="input-btn" type="submit">SUBSCRIBE</button>
+       </form>
+        </div>
+    </div>
+</section>
+
+<!--gallery section-->
+
+<section>
+    <div class="gallery">
+        <div class="title">
+            <h1>food gallery</h1>
+            <div class="underline"></div>
+            </div>
+     <div class="gallery-img">
+         <div class="img-1">
+            <img src="./Assets/Img/ayoola-salako-jTznoSVyZaM-unsplash.jpg" alt="fish">
+         </div>
+ <div class="img-2">
+    <img src="./Assets/Img/temitope-amodu-uGpp-q_NYWU-unsplash.jpg" alt="pepper">
+ </div>
+<div class="img-3">
+    <img src="./Assets/Img/mustapha-muhammed-I--r8KGq0I4-unsplash.jpg" alt="biscuit">
+</div>
+       <div class="img-4">
+        <img src="./Assets/Img/dhaya-eddine-bentaleb-Ahr5qr7FGDI-unsplash.jpg" alt="chocolate">
+       </div>
+<div class="img-5">
+    <img src="./Assets/Img/toa-heftiba-bZiX375uW8E-unsplash.jpg" alt="cup-cake">
+</div>
+     </div>       
+</section>
 <script src="./Assets/JS/app.js"></script>
 </body>
 </html>
