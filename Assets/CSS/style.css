@@ -77,7 +77,7 @@ nav{
         color: white;
         border: none;
     }
-    .search-btn,.food-btn,.foods-btn, .card-btn, .post-btn{
+    .search-btn, .card-btn, .post-btn{
         padding: 13px 20px;
         background-color: var(--orange);
         color: white;
@@ -85,6 +85,9 @@ nav{
         font-weight: bold;
         cursor: pointer;
         transition: all .5s ease-in;
+     }
+     .post-btn:hover{
+         background-color: var(--secondary-dark);
      }
      .search-icon, .input-btn{
         background-color: var(--orange);
@@ -110,23 +113,44 @@ nav{
     text-transform: uppercase;
 }
 .foodcat-btn{padding: 20px 0;}
+
 .underline{
     width: 100px;
     height: 5px;
     background-color: var(--orange);
-    margin: .5em 8.2em;
+    position: relative;
+    left: 37%;
 }
 .btn1, .btn2,.btn3,.btn4{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.food-btn, .foods-btn{
+.food-btn{
     margin: 10px 20px;
+    padding: 13px 20px;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
     background-color: var(--black);
+    transition: all .4s ease-in;
 }
-.foods-btn{background-color: var(--orange);}
-
+.food-btn:hover{
+    background-color: var(--orange);
+}
+.foods-btn{
+    padding: 13px 20px;
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .5s ease-in;
+}
+.foods-btn:hover{
+    background-color: var(--secondary-dark);
+}
 /*cards section*/
 .card{
     border-radius: 8px;
@@ -135,10 +159,12 @@ nav{
     transition: 0.3s all ease-in-out;
 }
 .card:hover{
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.397);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.541);
+    transform: scale(0.97);
 }
 .card-content{
     text-align: center;
+    margin: 0 20px;
 }
 .card-body{
     margin: 20px 0;
@@ -161,6 +187,9 @@ nav{
 .title{
     margin: 40px 0;
 }
+
+/*restaurants section*/
+
 .all-restaurants img{
     max-width: 100%;
 }
@@ -204,6 +233,9 @@ nav{
     text-decoration: none;
     transition: all .5s ease-in;
 }
+
+/*recipe section*/
+
 .all-recipes img{
     max-width: 100%;
     filter: brightness(40%);
@@ -238,13 +270,14 @@ background-image: linear-gradient(to top, rgba(0, 0, 0, 0.644), rgba(0, 0, 0, 0.
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
-height: 90vh;
+height: 85vh;
 }
 .news-underline{
     width: 100px;
     height: 5px;
     background-color: var(--orange);
-    margin: .5em 7.5em;
+    position: relative;
+    left: 36%;
 }
 .newsletter h1, .newsletter p{
     color: white;
@@ -253,7 +286,66 @@ height: 90vh;
 .news-content{
     text-align: center;
 }
+.input-btn:hover{
+    background-color: var(--secondary-dark);
+}
+
+/*gallery section*/
 .gallery-img img{max-width: 100%;}
+
+/*footer section*/
+
+footer{
+    background-color: #1A1A1A;
+    color: white;
+    padding: 30px 20px;
+}
+.footer-container{
+    margin: 30px 0;
+    text-align: center;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    transition: color .5s ease-in-out;
+    font-size: 20px;
+    line-height: 2;
+}
+footer p{line-height: 2;}
+footer a:hover{
+    color: var(--orange);
+}
+.fa-instagram, .fa-twitter, .fa-google{
+    font-size: 2rem;
+    margin: 10px;
+}
+footer form{
+    display: flex;
+    flex-direction: column;
+}
+footer h1{
+    color: var(--orange);
+    margin: 20px 0;
+}
+footer ul{
+    list-style: none;
+}
+.footer-email{
+    width: 100%;
+    background-color: var(--secondary-dark);
+}
+#message-area{
+    padding: 50px 60px;
+}
+textarea{
+    margin: 20px 0; 
+    background-color: var(--secondary-dark);
+    border: none;
+}
+.copyright{
+    text-align: center;
+    font-size: 1rem;
+}
 
 
 /*resolution for larger screens*/
@@ -298,9 +390,11 @@ height: 90vh;
         justify-content: center;
         padding: 50px 0;
     }
+  
     .underline{
-        margin: .5em 39.5em;
+      left: 46.5%;
     }
+    
     .title{
         margin: 40px 0;
     }
@@ -356,7 +450,7 @@ height: 90vh;
     margin: 150px 0;
 }
 .news-underline{
-    margin: .5em 34.1em;
+    left: 46.5%;
 }
 .gallery-img{
     display: grid;
@@ -388,7 +482,20 @@ height: 90vh;
     grid-column: 1/2;
     grid-row: 3/4;
 }
-
+.footer-container{margin: 0 60px;}
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+footer a{font-size: 1.3rem;}
+.footer-about, .footer-links, label{
+    text-align: left;
+}
+.footer-links{margin: 0 100px;}
+.fa-instagram, .fa-twitter, .fa-google{
+    font-size: 2.2rem;
+    margin: 20px;
+}
 }
 
 
@@ -424,8 +531,8 @@ height: 90vh;
         margin: 25px 0;
     }
     .underline{
-        margin: .5em 29em;
-    }
+          left: 45.6%;
+        }
     .foodcat-btn{
         display: flex;
         align-items: center;
@@ -477,7 +584,7 @@ height: 90vh;
 .recipe-extras i, .recipe-overlay a{font-size: 1.4rem;}
 .newsletter-section{
     margin: 70px;
-    height: 60vh;
+    height: 50vh;
 }
 .news-content{
     text-align: center;
@@ -485,7 +592,7 @@ height: 90vh;
 }
 .newsletter p{font-size: 1.8rem;}
 .news-underline{
-    margin: .5em 23.5em;
+    left: 44.5%;
 }
 .gallery-img{
     display: grid;
@@ -498,8 +605,8 @@ height: 90vh;
     grid-row: 1/2;
     grid-column: 1/2;
 }
-.img-1 img{
-    height: 480px;
+.img-1 img, .img-2 img{
+    height: 420px;
 }
 .img-2{
     grid-row: 1/2;
@@ -517,7 +624,21 @@ height: 90vh;
     grid-column: 1/2;
     grid-row: 3/4;
 }
-
+.footer-container{margin: 0 40px;}
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+footer h1{font-size: 1.5rem;}
+footer a{font-size: 1.3rem;}
+.footer-about, .footer-links, label{
+    text-align: left;
+}
+.footer-links{margin: 0 60px;}
+.fa-instagram, .fa-twitter, .fa-google{
+    font-size: 2.2rem;
+    margin: 20px;
+}
 }
 
 /*resolution for tablets and ipads*/
@@ -562,4 +683,5 @@ height: 90vh;
     .first-restaurant img, .second-restaurant img, .third-restaurant img, .fourth-restaurant img{
         filter: brightness(50%);
     }
+    .footer-container h1{font-size: 1.5rem;}
 }
