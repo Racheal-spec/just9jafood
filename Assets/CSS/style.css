@@ -700,6 +700,10 @@ footer a{font-size: 1.3rem;}
     header{
         height: auto;
     }
+    nav{
+        z-index: 10;
+    }
+    .hero-text h1{font-size: 2.3rem;}
     .navlink{
         list-style: none;
         display: flex; 
@@ -732,6 +736,10 @@ footer a{font-size: 1.3rem;}
     form input{width: 80%;}
     .each-restaurant img{
         filter: brightness(50%);
+    }
+    .restaurant-btn1{
+        padding: 15px 8px !important;
+        margin: 0 12px !important;
     }
     .footer-container h1{font-size: 1.5rem;}
 }
