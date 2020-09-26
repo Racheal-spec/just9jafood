@@ -3,53 +3,53 @@ const navLinks = document.querySelector('.navlink');
 
 Burger.addEventListener('click', () => {
     navLinks.classList.toggle('open');
-})
+});
 
-startImageTransition(); 
   
-function startImageTransition() { 
-    var images = document.getElementsByClassName("test"); 
-
-    for (var i = 0; i < images.length; ++i) { 
+function transition() { 
+    let images = document.getElementsByClassName("bounce"); 
+       // Set opacity of all images to 1
+    for (let i = 0; i < images.length; ++i) { 
         images[i].style.opacity = 1; 
     } 
+    //stores the z-index of top most image 
+    let topImage = 1; 
+    //stores the index of the current image
+    let current = images.length - 1; 
 
-    var top = 1; 
-
-    var cur = images.length - 1; 
-
-    setInterval(changeImage, 3000); 
-
+    setInterval(changeImage, 4000); 
+    //Function to transitions from one image to other 
     async function changeImage() { 
+      // Stores index of next image 
+        let nextImage = (1 + current) % images.length; 
+       /* Doing this next line make sure that the image below 
+               the current image is nextImage*/
+        images[current].style.zIndex = topImage + 1; 
+        images[nextImage].style.zIndex = topImage; 
 
-        var nextImage = (1 + cur) % images.length; 
+        await imageTransition(); 
+         // Set the z-index of current image to top 
+        images[current].style.zIndex = topImage; 
+          // Set the z-index of nextImage to top+1 
+        images[nextImage].style.zIndex = topImage + 1; 
 
-        images[cur].style.zIndex = top + 1; 
-        images[nextImage].style.zIndex = top; 
-
-        await transition(); 
-
-        images[cur].style.zIndex = top; 
-  
-        images[nextImage].style.zIndex = top + 1; 
-
-        top = top + 1; 
-
-        images[cur].style.opacity = 1; 
+        topImage = topImage + 1; 
         
-        cur = nextImage; 
+        images[current].style.opacity = 1; 
+        
+        current = nextImage; 
 
     } 
 
-    function transition() { 
+    function imageTransition() { 
         return new Promise(function(resolve, reject) { 
-            var del = 0.01; 
+            let fade = 0.01; 
 
-            var id = setInterval(changeOpacity, 10); 
+            let id = setInterval(changeOpacity, 10); 
 
             function changeOpacity() { 
-                images[cur].style.opacity -= del; 
-                if (images[cur].style.opacity <= 0) { 
+                images[current].style.opacity -= fade; 
+                if (images[current].style.opacity <= 0) { 
                     clearInterval(id); 
                     resolve(); 
                 } 
@@ -57,4 +57,6 @@ function startImageTransition() {
 
         }) 
     } 
-    }
+}
+    
+    transition(); 

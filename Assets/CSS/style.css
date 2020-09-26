@@ -22,7 +22,7 @@ p{
 header{
     background-color: var(--black);
     width: 100%;
-    height: auto;
+    height: 98vh;
 }
 .menu{
     color: white;
@@ -56,11 +56,29 @@ nav{
     margin: 20px; 
 }
 .hero-section .hero-img{
-        width: 100%;
+    width: 100%; 
+    height: 100%;
+    position: relative;
     }
     .hero-img img{
-        width:50%;
+        width: 100%;
         height: 70%;
+        margin-top: 100px;
+        animation: bounce 2s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+    .bounce{
+        animation-name: bounce;
+        animation-timing-function: ease;
+    }
+    @keyframes bounce{
+        from{
+            transform: translateY(0);
+        }
+        to{
+            transform: translateY(-50px);
+        }
     }
     .hero-text h1{
         font-size: 2.4rem;
@@ -191,24 +209,35 @@ nav{
 /*restaurants section*/
 
 .all-restaurants img{
-    max-width: 100%;
+   max-width: 100%;
 }
-.first-restaurant,.second-restaurant, .third-restaurant, .fourth-restaurant{
+.each-restaurant{
     position: relative;
+    width: 100%;
+    height: 100%;
 }
-
-.restaurant-overlay{
-    position: absolute;
+.each-restaurant img{
+    width: 100%;
+    height: 100%;
+    transition: filter .3s ease-in-out;
+}
+.each-restaurant:hover img{
+    filter: blur(2px) brightness(40%);
+    box-shadow: 0 0 8px 5px;
+}
+.each-restaurant :not(img){
     top: 20%;
     left: 12%;
     color: white;
-   /* opacity: 0;
-    transition: opacity .3s ease-in;*/
+    text-align: center;
+    transition: opacity .3s ease-in;
 }
-/*
-.restaurant-overlay:hover{
+.each-restaurant:hover :not(img){
     opacity: 1;
-}*/
+}
+.restaurant-overlay{
+  position: absolute;
+}
 .restaurant-overlay h1{
     margin-bottom: 30px;
     text-align: center;
@@ -266,7 +295,7 @@ nav{
 }
 /*newsletter section*/
 .newsletter-section{
-background-image: linear-gradient(to top, rgba(0, 0, 0, 0.644), rgba(0, 0, 0, 0.651)) ,url(../Img/omotayo-tajudeen-N74ezMMIwy4-unsplash\ -\ Copy.jpg);
+background-image: linear-gradient(to top, rgba(0, 0, 0, 0.644), rgba(0, 0, 0, 0.651)) ,url(../Img/Chicken-Suya.jpg);
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
@@ -351,9 +380,10 @@ textarea{
 /*resolution for larger screens*/
 
 @media (min-width: 1281px) {
-    .navbar{ 
+    .nav-wrapper{
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     .navlink{
         margin: 25px 10px;
@@ -423,12 +453,12 @@ textarea{
 .card-content{
     text-align: center;
 }
-.first-restaurant img{
+.each-restaurant img{
     filter: brightness(100%);
     transition: filter .3s ease-in;
 }
-.first-restaurant img:hover{
-    filter: brightness(50%);
+.each-restaurant img:hover{
+    filter: blur(20px),brightness(50%);
 }
 .all-restaurants, .all-recipes{
     display: grid;
@@ -436,9 +466,10 @@ textarea{
     grid-gap: 10px;
     margin: 70px;
 }
-.restaurant-overlay{
+.each-restaurant :not(img){
     top: 30%;
     left: 30%;
+    opacity: 0;
 }
 .recipe-extras i, .recipe-overlay a{font-size: 1.4rem;}
 .newsletter-section{
@@ -463,8 +494,19 @@ textarea{
     grid-row: 1/2;
     grid-column: 1/2;
 }
-.img-1 img{
-    height: 480px;
+.img-1 img, .img-2 img, .img-3 img{
+    height: 400px;
+    width: 600px;
+    object-fit: cover;
+}
+.img-4 img{
+    height: 720px;
+    width: 600px;
+}
+.img-5 img{
+height: 300px;
+width: 600px;
+object-fit: cover;
 }
 .img-2{
     grid-row: 1/2;
@@ -510,7 +552,7 @@ footer a{font-size: 1.3rem;}
     .logo img{
         width: 200px;
     }
-    .navbar{ 
+    .nav-wrapper{ 
         display: flex;
         justify-content: space-between;
     }
@@ -564,22 +606,16 @@ footer a{font-size: 1.3rem;}
 .card-content{
     text-align: center;
 }
-.first-restaurant img{
-    filter: brightness(100%);
-    transition: filter .3s ease-in;
-}
-.first-restaurant img:hover{
-    filter: brightness(50%);
-}
 .all-restaurants,.all-recipes{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
     margin: 70px;
 }
-.restaurant-overlay{
+.each-restaurant :not(img){
     top: 30%;
-    left: 30%;
+    left: 20%;
+    opacity: 0;
 }
 .recipe-extras i, .recipe-overlay a{font-size: 1.4rem;}
 .newsletter-section{
@@ -605,9 +641,20 @@ footer a{font-size: 1.3rem;}
     grid-row: 1/2;
     grid-column: 1/2;
 }
-.img-1 img, .img-2 img{
-    height: 420px;
+.img-1 img, .img-2 img, .img-3 img{
+    height: 400px;
+    width: 600px;
+    object-fit: cover;
 }
+.img-4 img{
+    height: 720px;
+    width: 600px;
+}
+.img-5 img{
+    height: 300px;
+    width: 600px;
+    object-fit: cover;
+    }
 .img-2{
     grid-row: 1/2;
     grid-column: 2/3;
@@ -629,7 +676,7 @@ footer a{font-size: 1.3rem;}
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-footer h1{font-size: 1.5rem;}
+footer h1{font-size: 1.5rem !important;}
 footer a{font-size: 1.3rem;}
 .footer-about, .footer-links, label{
     text-align: left;
@@ -650,6 +697,9 @@ footer a{font-size: 1.3rem;}
 
 /*resolution for most smartphones: screens btw 320px to 480px*/
 @media (min-width: 320px) and (max-width: 480px) {
+    header{
+        height: auto;
+    }
     .navlink{
         list-style: none;
         display: flex; 
@@ -680,7 +730,7 @@ footer a{font-size: 1.3rem;}
         transform: translate(-5%, -50%);
     }
     form input{width: 80%;}
-    .first-restaurant img, .second-restaurant img, .third-restaurant img, .fourth-restaurant img{
+    .each-restaurant img{
         filter: brightness(50%);
     }
     .footer-container h1{font-size: 1.5rem;}
