@@ -48,14 +48,25 @@ nav{
     list-style: none;
     display: flex;
 }
+.title h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+.underline{
+    width: 100px;
+    height: 5px;
+    background-color: var(--orange);
+    position: relative;
+    left: 37%;
+}
 .hero-section{
     display: flex;
     flex-direction: column-reverse;
 }
-.hero-section .hero-text{
+.hero-text{
     margin: 20px; 
 }
-.hero-section .hero-img{
+.hero-img{
     width: 100%; 
     height: 100%;
     position: relative;
@@ -126,19 +137,7 @@ nav{
 .food{
     padding: 50px 0;
 }
-.title h1{
-    text-align: center;
-    text-transform: uppercase;
-}
 .foodcat-btn{padding: 20px 0;}
-
-.underline{
-    width: 100px;
-    height: 5px;
-    background-color: var(--orange);
-    position: relative;
-    left: 37%;
-}
 .btn1, .btn2,.btn3,.btn4{
     display: flex;
     align-items: center;
@@ -194,8 +193,9 @@ nav{
  .card-btn{
      margin: 30px 0;
  }
-.card-header img{
+ .card-header img{
     max-width: 100%;
+    min-height: 350px;
 }
 .lastpost-btn{
     text-align: center;
@@ -227,7 +227,7 @@ nav{
 }
 .each-restaurant :not(img){
     top: 20%;
-    left: 12%;
+    left: 10%;
     color: white;
     text-align: center;
     transition: opacity .3s ease-in;
@@ -321,6 +321,7 @@ height: 85vh;
 
 /*gallery section*/
 .gallery-img img{max-width: 100%;}
+figcaption{text-align: center;}
 
 /*footer section*/
 
@@ -393,9 +394,6 @@ textarea{
         width: 200px;
         margin-top: 30px;
     }
-    .menu-items{
-        margin: 10px 5px;
-      }
     .hero-section{
         flex-direction: row;
         justify-content: space-between;
@@ -427,10 +425,6 @@ textarea{
     
     .title{
         margin: 40px 0;
-    }
-    .card-header img{
-        max-width: 100%;
-        min-height: 300px;
     }
     .card-wrapper{
         display: flex;
@@ -582,8 +576,7 @@ footer a{font-size: 1.3rem;}
         padding: 50px 0;
     }
     .card-header img{
-        max-width: 100%;
-        min-height: 200px;
+        min-height: 250px;
     }
     .card-wrapper{
         display: flex;
@@ -620,7 +613,7 @@ footer a{font-size: 1.3rem;}
 .recipe-extras i, .recipe-overlay a{font-size: 1.4rem;}
 .newsletter-section{
     margin: 70px;
-    height: 50vh;
+    height: 40vh;
 }
 .news-content{
     text-align: center;
@@ -701,7 +694,7 @@ footer a{font-size: 1.3rem;}
         height: auto;
     }
     nav{
-        z-index: 10;
+        z-index: 9;
     }
     .hero-text h1{font-size: 2.3rem;}
     .navlink{
@@ -712,7 +705,7 @@ footer a{font-size: 1.3rem;}
         justify-content: space-around; 
         height: 92vh;
         width: 100%;
-        position: fixed;
+        position: absolute;
         background-color: var(--orange);
         clip-path: circle(0px at 90% -10%);
         -webkit-clip-path: circle(0px at 90% -10%);
@@ -720,6 +713,12 @@ footer a{font-size: 1.3rem;}
     }
     .navlink.open{
         clip-path: circle(1000px at 90% -10%);
+    }
+    .title h1{
+       font-size: 1.3rem;
+    }
+    .menu:hover{
+        color: white;
     }
     .line{
         width: 26px;
@@ -737,9 +736,13 @@ footer a{font-size: 1.3rem;}
     .each-restaurant img{
         filter: brightness(50%);
     }
-    .restaurant-btn1{
-        padding: 15px 8px !important;
-        margin: 0 12px !important;
-    }
     .footer-container h1{font-size: 1.5rem;}
 }
+@media only screen and (device-width: 320px){
+    .each-restaurant :not(img){
+    left: 5%;
+    }
+    .news-underline{
+        left: 34%;
+    }
+} 
