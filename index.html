@@ -5,14 +5,13 @@
 <meta name="description" content="Nigerian foods">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--Gooogle fonts-->
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
 <!--main css-->
-<Link rel="stylesheet" href="./Assets/CSS/style.css">
-<!--font awesome-->
-<script src="./Assets/libraries/all.js"></script>
+<Link rel="stylesheet" href="./Assets/CSS/style.min.css">
+
 <title>Just9jafoods</title>     
 </head>
-<body>
+<body onscroll="">
 <header>
   <nav class="navbar">
 <div class="nav-wrapper">
@@ -44,9 +43,8 @@
     <p>Everything you need to know about Nigerian food culture and recipes.
   </p>
 <form>
-   <label for="search">
+   <label for="search-bar"></label>
    <input type="text" id="search-bar" placeholder="search keyword, food, restaurant">
-   </label>
    <button class="search-icon" type="submit">
    <i class="fa fa-search"></i>
   </button>
@@ -248,9 +246,8 @@ quam alias,ipsam corrupti deleniti?</p>
 <div class="news-content">
     <p>Subscribe to our weekly Newsletter to recieve blog updates and new food recipes</p>
     <form>
-    <label for="email">
+    <label for="news-form"></label>
     <input type="text" id="news-form" placeholder="Your email">
-</label>
     <button class="input-btn" type="submit">SUBSCRIBE</button>
 </form>
 </div>
@@ -328,10 +325,9 @@ Amala and Gbegiri
 <div class="footer-contact">
     <h1>CONTACT ME</h1>
     <form>
-        <label for="email">EMAIL
-        <input type="text" class="footer-email">
-    </label>
-        <label for="email">YOUR MESSAGE</label>
+        <label for="email">EMAIL </label>
+        <input type="text" id="email" class="footer-email">
+        <label for="message-area">YOUR MESSAGE</label>
         <textarea id="message-area" name="message"></textarea>
     </form>
     <div class="lastpost-btn">
@@ -342,6 +338,8 @@ Amala and Gbegiri
 <p class="copyright">copyright &#169; 2020 All right reserved Just9jafood</p>
 </footer>
 <script src="./Assets/JS/app.js"></script>
+<!--font awesome-->
+<script src="./Assets/libraries/all.js"></script>
 </body>
 </html>
 
